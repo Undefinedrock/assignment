@@ -1,0 +1,62 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+public class ArrayListProgram {
+
+
+
+    public static void main(String p[]) {
+        Scanner kybd = new Scanner(System.in);
+
+
+        int grade = 0;
+        int max = 0;
+        int min = 0;
+        int count = 0;
+        double sum = 0;
+
+        ArrayList grades = new ArrayList();
+        System.out.println("Enter grade value");
+        grade = kybd.nextInt();
+        if (grade != -1) {
+
+            min = grade;
+            max = grade;
+
+
+        }
+        while (grade != 1)
+        {
+            count=count+1;
+            grades.add(grade);
+            System.out.println("Enter your grade:");
+            grade=kybd.nextInt();}
+        for(int index=0; index<grades.size();index++){
+                if (grades.get(index)>max)
+                    max=grades.get(index);
+                if(grades.get(index)<min)
+                    min=grades.get(index);
+
+             sum+=grades.get(index);
+
+            }
+           if(count!=0){
+
+
+            System.out.println("Minimum Grade: "+ min);
+               System.out.println("Maximum Grade: "+ max);
+               System.out.println("Average Grade:"+ sum/count );
+
+
+
+
+
+
+
+           }
+
+
+
+        }
+    }
+
+
